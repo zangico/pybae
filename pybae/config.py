@@ -43,8 +43,9 @@ class BaseConfig:
     app: AppSettings
 
     @classmethod
-    def load(cls: Type[SectionClass]) -> SectionClass:
-        if not os.path.exists(cls.path):
+    def load(cls: Type[SectionClass], path: str = None) -> SectionClass:
+        config_path = path or cls.path
+        if not os.path.exists(config_path):
             raise FileNotFoundError(f"Config file '{cls.path}' not found.")
         with open(cls.path, "r") as f:
             raw_data = yaml.safe_load(f)

@@ -24,7 +24,7 @@ class Foo(config.ConfigSection):
 class Config(config.BaseConfig)
     foo: Foo
 
-cfg = My('path/to/config.yaml')
+cfg = Config.load('path/to/config.yaml')
 print(cfg.foo.bar)
 ```
 
