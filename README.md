@@ -1,22 +1,22 @@
-# pybe
+# pybae
 A backend library for your application
 
 ## Description
-`pybe` is a Python library designed to simplify configuration and backend management in your applications. It provides tools to faster new deployments of backend services.
+`pybae` is a Python library designed to simplify configuration and backend management in your applications. It provides tools to faster new deployments of backend services.
 
 
 ## Installation
 
 Clone the repository and install the dependencies:
 ```bash
-pip install pybe
+pip install pybae
 ```
 
 ## Usage
 
 Example usage:
 ```python
-from pybe import config
+from pybae import config
 
 class Foo(config.ConfigSection):
     bar: str
@@ -30,7 +30,7 @@ print(cfg.foo.bar)
 
 ## Project Structure
 
-- `pybe/`: library source code
+- `pybae/`: library source code
   - `config.py`: configuration management
 - `example/`: usage examples
   - `config.yaml`: sample configuration file

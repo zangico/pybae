@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pybe"
+name = "pybae"
 version = "0.1.0"
 description = "Core utilities for backend applications"
 readme = "README.md"
@@ -33,14 +33,14 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/zangico/pybe"
-Repository = "https://github.com/zangico/pybe"
-Documentation = "https://github.com/zangico/pybe#readme"
-"Bug Tracker" = "https://github.com/zangico/pybe/issues"
+Homepage = "https://github.com/zangico/pybae"
+Repository = "https://github.com/zangico/pybae"
+Documentation = "https://github.com/zangico/pybae#readme"
+"Bug Tracker" = "https://github.com/zangico/pybae/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["pybe*"]
+include = ["pybae*"]
 
 [tool.black]
 line-length = 88
