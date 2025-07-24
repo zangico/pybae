@@ -13,7 +13,7 @@ class AppSettings(ConfigSection):
 class BaseConfig:
     path: str = "config.yaml"
 
-    app: AppSettings 
+    app: AppSettings
 
     @classmethod
     def load(cls: Type[SectionClass]) -> SectionClass:
@@ -24,15 +24,17 @@ class BaseConfig:
 
         annotations = {}
         for base_cls in reversed(cls.__mro__):
-            if hasattr(base_cls, '__annotations__'):
+            if hasattr(base_cls, "__annotations__"):
                 annotations.update(base_cls.__annotations__)
 
         for field_name, field_type in annotations.items():
-            if field_name == 'path':
+            if field_name == "path":
                 continue
             section = raw_data.get(field_name, {})
             if not issubclass(field_type, ConfigSection):
-                raise TypeError(f"Config section '{field_name}' must be a subclass of BaseModel")
+                raise TypeError(
+                    f"Config section '{field_name}' must be a subclass of BaseModel"
+                )
             values[field_name] = field_type(**section)
 
         return cls(**values)
