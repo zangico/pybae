@@ -36,7 +36,7 @@ dev = [
 Homepage = "https://github.com/zangico/pybe"
 Repository = "https://github.com/zangico/pybe"
 Documentation = "https://github.com/zangico/pybe#readme"
-Bug Tracker = "https://github.com/zangico/pybe/issues"
+"Bug Tracker" = "https://github.com/zangico/pybe/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
