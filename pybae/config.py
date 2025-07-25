@@ -26,13 +26,13 @@ Methods:
 
 import yaml
 from typing import Type, TypeVar, Any
-from pydantic import BaseModel as ConfigSection
+from pydantic import BaseModel as BaseSection
 import os
 
 SectionClass = TypeVar("T", bound="BaseConfig")
 
 
-class AppSettings(ConfigSection):
+class AppSettings(BaseSection):
     name: str
     debug: bool = False
 
@@ -61,7 +61,7 @@ class BaseConfig:
             if field_name == "path":
                 continue
             section = raw_data.get(field_name, {})
-            if not issubclass(field_type, ConfigSection):
+            if not issubclass(field_type, BaseSection):
                 raise TypeError(
                     f"Config section '{field_name}' must be a subclass of BaseModel"
                 )
