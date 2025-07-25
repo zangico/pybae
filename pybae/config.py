@@ -29,7 +29,9 @@ from typing import Type, TypeVar, Any
 from pydantic import BaseModel as BaseSection
 import os
 
-SectionClass = TypeVar("T", bound="BaseConfig")
+__all__ = ["BaseConfig", "AppSettings"]
+
+SectionClass = TypeVar("SectionClass", bound="BaseConfig")
 
 
 class AppSettings(BaseSection):
