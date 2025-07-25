@@ -5,7 +5,7 @@ This package provides configuration management and backend helpers for Python pr
 """
 
 from . import config
-from utils import datetools
+from .utils import datetools
 
 __all__ = [
     "config",
